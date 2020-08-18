@@ -160,8 +160,9 @@
     transform      : rotate(-90deg);
     display        : flex;
     align-items    : center;
-    position       : absolute;
-    bottom         : 120px;
+    position: absolute;
+    bottom: 180px;
+    min-width: 280px;
 }
 
 .banner__text {
@@ -172,15 +173,15 @@
 
 
 .banner__text::after {
-    content         : "";
-    display         : block;
-    width           : 100%;
-    height          : 110px;
-    position        : absolute;
-    bottom          : 15px;
-    filter          : blur(2px);
-    background-color: var(--color-white);
-    opacity         : 0.6;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 25px;
+    filter: blur(1px);
+    background-color: var(--color-white-opacity);
+    opacity: 0.8;
 }
 
 .banner__text-title {
@@ -200,6 +201,10 @@
     }
     .banner__text-wrapper {
         min-height         : 600px;
+    }
+    .banner__text::after {
+        height: 70px;
+        bottom: 15px;
     }
 }
 
