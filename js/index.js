@@ -3,6 +3,7 @@ window.onload = function () {
 	// menu active
 	let mainNavLink = document.querySelectorAll('.main-nav__link');
 	let mainNavLinkActive = 0;
+	console.log( mainNavLinkActive )
 
 	mainNavLink.forEach(function (obj, i) {
 		mainNavLink[i].addEventListener('click', function () {
@@ -10,7 +11,9 @@ window.onload = function () {
 				mainNavLink[i].classList.add('main-nav__link-active');
 				mainNavLink[mainNavLinkActive].classList.toggle('main-nav__link-active');
 				mainNavLinkActive = mainNavLink[i].getAttribute('data-main-nav-id')
+				
 			}
+			console.log( mainNavLinkActive )
 		});
 	});
 
