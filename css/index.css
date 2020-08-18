@@ -1,0 +1,210 @@
+@import "./reset.css";
+@import "./var.css";
+@import "./typography.css";
+
+
+.wrapper {
+    min-width   : 360px;
+    overflow: hidden;
+    scroll-behavior:    smooth;
+}
+
+/* HEADER */
+.main-header {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    flex-wrap      : wrap;
+    min-height     : 140px;
+}
+
+.nav-wrapper {
+    min-width      : 100px;
+    padding        : 0 30px;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    flex-wrap      : wrap;
+}
+
+
+.main-header__logo-link {
+    display  : inline-block;
+    max-width: 60px;
+    height   : auto;
+    padding  : 30px;
+}
+
+/* nav ----------------------------- */
+#main-nav-call {
+    display: none;
+}
+
+.main-nav__ul {
+    visibility: hidden;
+    display   : none;
+}
+
+#main-nav-call:checked~.main-nav__ul {
+    display   : block;
+    visibility: visible;
+    transition: 0.5s all;
+    position  : absolute;
+    right     : 30px;
+}
+
+#main-nav-call:checked+.main-nav-burger::before {
+    transform : rotate(45deg);
+    top       : 24px;
+    transition: 0.5s all;
+}
+
+#main-nav-call:checked+.main-nav-burger span {
+    display: none;
+}
+
+#main-nav-call:checked+.main-nav-burger::after {
+    transform : rotate(-45deg);
+    top       : 24px;
+    transition: 0.5s all;
+}
+
+.main-nav-burger {
+    display      : block;
+    height       : 50px;
+    width        : 50px;
+    position     : relative;
+    visibility   : visible;
+    margin-bottom: 0;
+}
+
+.main-nav-burger::before {
+    content           : "";
+    width             : 50px;
+    height            : 2px;
+    background-color  : var(--color-salmon-lite);
+    display           : block;
+    position          : absolute;
+    top               : 12px;
+    -webkit-transition: 0.5s all;
+    transition        : 0.5s all;
+}
+
+.main-nav-burger::after {
+    content           : "";
+    width             : 50px;
+    height            : 2px;
+    background-color  : var(--color-salmon-lite);
+    display           : block;
+    position          : absolute;
+    bottom            : 12px;
+    -webkit-transition: 0.5s all;
+    transition        : 0.5s all;
+}
+
+.main-nav-burger span {
+    width           : 50px;
+    height          : 2px;
+    background-color: var(--color-salmon-lite);
+    position        : absolute;
+    top             : 24px;
+}
+
+
+/* SECTION  */
+.section {
+    display: flex;
+
+}
+
+.banner__text-wrapper {
+    background         : url(../img/bg.jpg) no-repeat;
+    background-position: center;
+    background-size    : cover;
+    min-height         : 750px;
+    flex               : 1;
+    display            : flex;
+    align-items        : flex-end;
+    justify-content    : flex-end;
+}
+
+
+.section-link {
+    min-width      : 150px;
+    position       : relative;
+    display        : flex;
+    justify-content: center;
+}
+
+.section-link img {
+    margin-right: 20px;
+}
+
+.section02 img {
+    transform   : rotate(180deg);
+    margin-right: 0;
+    margin-left : 15px;
+}
+
+.section-link a {
+    text-decoration: none;
+    color          : var(--color-grey);
+    display        : block;
+    transform      : rotate(-90deg);
+    display        : flex;
+    align-items    : center;
+    position       : absolute;
+    bottom         : 120px;
+}
+
+.banner__text {
+    width        : 50%;
+    margin-bottom: 100px;
+    position     : relative;
+}
+
+
+.banner__text::after {
+    content         : "";
+    display         : block;
+    width           : 100%;
+    height          : 110px;
+    position        : absolute;
+    bottom          : 15px;
+    filter          : blur(2px);
+    background-color: var(--color-white);
+    opacity         : 0.6;
+}
+
+.banner__text-title {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .banner__text {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .section-link {
+        min-width: 100px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .section-link {
+        min-width: 40px;
+    }
+}
+
+
+.hidden{
+    visibility: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: 0;
+    left: 0;
+}

@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "Encode-Sans-Expanded";
+    src        : url(../fonts/EncodeSansExpanded-Light.woff2);
+}
+
+html {
+    font-family: Encode-Sans-Expanded, Arial, Helvetica, sans-serif;
+    font-size  : 14px;
+}
+
+body,
+a {
+    font-family: Encode-Sans-Expanded, Arial, Helvetica, sans-serif;
+}
+
+
+.main-nav__link {
+    color          : var(--color-salmon-lite);
+    font-size      : 1.5rem;
+    line-height    : 1.4;
+    text-decoration: none;
+}
+
+.main-nav__link-active {
+    text-decoration: underline;
+}
+
+.lang-nav__link {
+    font-size: 1rem;
+    color    : var(--color-salmon-lite);
+}
+
+.banner__text-title {
+    font-size     : 6rem;
+    text-transform: capitalize;
+    color         : var(--color-white);
+    padding       : 0 30px;
+    z-index       : 5;
+    position      : relative;
+}
+
+.banner__text-subtitle {
+    font-size     : 6rem;
+    text-transform: lowercase;
+    color         : var(--color-salmon-lite);
+    padding       : 0 30px;
+    z-index       : 5;
+    position      : relative;
+}
+
+@media only screen and (max-width: 800px) {
+    .banner__text-title {
+        font-size: 4rem;
+    }
+
+    .banner__text-subtitle {
+        font-size: 4rem;
+    }
+}
+
+
+
